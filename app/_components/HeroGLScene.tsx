@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef } from 'react';
-import type { IUniform } from 'three';
+// import type { IUniform } from 'three';
 
 /* ─────────────────────────────────────────────────────────────────────────
    GLSL: morphing sphere particle system
@@ -266,7 +266,7 @@ export default function HeroGLScene() {
         const t = clock.getElapsedTime();
 
         // Update uniforms
-        (pMat.uniforms.uTime as THREE.IUniform).value = t;
+        pMat.uniforms.uTime.value = t;
 
         // Torus knot rotation
         knotMesh.rotation.x = t * 0.18;
